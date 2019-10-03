@@ -1,0 +1,32 @@
+.sidebar {
+	box-shadow: 0 0 20px rgba(65,105,225,.3);
+}
+.sidebar:hover {
+	box-shadow: 0 0 15px rgba(65,105,225,.3);
+}
+.sidebar .nav-link {
+	padding-left: 0;
+}
+.hover-border-effect {
+	position: relative;
+}
+.hover-border-effect:before {
+	position: absolute;
+	bottom: -5px;
+	content: " ";
+	border-bottom: .09rem solid rgba(0,123,255, 0.5);
+	transform: scale(0, 1);
+	width: 100%;
+	transition: transform 0.3s
+}
+.hover-border-effect:hover:before {
+	transform: scale(1, 1);
+}
+.nav-item:hover::after {
+	width: 100%;
+	transition: width .3s;
+}
+.sidebar .nav-link.active {
+	color: #007bff;
+}
+
