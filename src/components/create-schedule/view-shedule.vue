@@ -82,7 +82,7 @@
 		},
 		data() {
 			return {
-				nameTable: 'schedule1',
+				nameTable: 'schedule',
 				editIndex: null,
 				originalData: null,
 				columns: this.getColumns(),
@@ -91,8 +91,8 @@
 				showParams: true,
 				showParamsButton: false,
 				showError: false,
-				daysNumber: '',
-				lessonsNumber: '',
+				daysNumber: 5,
+				lessonsNumber: 6,
 				rows: [],
 				styleForColumns: {
 					'День': {width: "5%"},
@@ -113,7 +113,6 @@
 					this.generated = false;
 					try {
 						let result = this.generateSched(JSON.parse(localStorage.getItem('groups')), JSON.parse(localStorage.getItem('teachers')), JSON.parse(localStorage.getItem('disciplines')), JSON.parse(localStorage.getItem('rooms')), [1, +this.daysNumber, +this.lessonsNumber], true);
-						localStorage.setItem('schedule', JSON.stringify(result));
 						this.rows = this.printSchedule(result);
 						setTimeout(() => {
 							this.showParams = false;
