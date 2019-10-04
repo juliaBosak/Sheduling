@@ -124,6 +124,7 @@ export default {
         }
     },
     mounted() {
+        localStorage.setItem(this.nameTable, JSON.stringify(this.gridData));
         if (localStorage.getItem(this.nameTable)) this.gridData = JSON.parse(localStorage.getItem(this.nameTable))
     }
 }

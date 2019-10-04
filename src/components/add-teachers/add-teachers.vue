@@ -58,13 +58,6 @@ export default {
               { 'ПІБ викладача': 'Причепа І. В.', 'Дисципліна': 'ЕОБ', 'Лекції': true, 'Практичні': true, 'Лабораторні': false},
               { 'ПІБ викладача': 'Крилик Л. В.', 'Дисципліна': 'ММДОС', 'Лекції': true, 'Практичні': true, 'Лабораторні': true},
               { 'ПІБ викладача': 'Вахоська Л. М.', 'Дисципліна': 'МСШІ', 'Лекції': false, 'Практичні': false, 'Лабораторні': true}
-
-
-
-
-
-
-
             ]
         }
     },
@@ -77,6 +70,7 @@ export default {
         }
     },
     mounted() {
+        localStorage.setItem(this.nameTable, JSON.stringify(this.gridData));
         if (localStorage.getItem(this.nameTable)) this.gridData = JSON.parse(localStorage.getItem(this.nameTable))
     }
 }

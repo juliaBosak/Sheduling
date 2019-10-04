@@ -35,11 +35,11 @@
 	import addRooms from './components/add-rooms/add-rooms'
 	import addGroups from './components/add-groups/add-groups'
 	import viewSchedule from './components/create-schedule/view-shedule'
-	 /* window.onbeforeunload = function() {
+	window.onbeforeunload = function() {
 		localStorage.clear();
 		return '';
 	};
-	  */
+
 	let tabs = [addGroups, addDisciplines, addTeachers, addRooms, viewSchedule];
 
 	export default {
